@@ -1,0 +1,12 @@
+Owner Name,Owner Email,Property,Unit,Transaction Date,Income,Expense,Balance,Category,Notes
+Maya Chen,maya@example.com,Maple Flats,2A,2026-05-01,1850,0,1850,Rent,May rent received
+Maya Chen,maya@example.com,Maple Flats,2A,2026-05-12,0,175,1675,Maintenance,Kitchen faucet repair
+Maya Chen,maya@example.com,Maple Flats,2A,2026-05-29,0,125,1550,Management Fee,Monthly management fee
+Oliver Grant,oliver@example.com,Cedar Court,101,2026-05-03,2200,0,2200,Rent,May rent received
+Oliver Grant,oliver@example.com,Cedar Court,101,2026-05-14,0,385,1815,Plumbing,Water heater service
+Oliver Grant,oliver@example.com,Cedar Court,101,2026-05-29,0,150,1665,Management Fee,Monthly management fee
+Priya Shah,priya@example.com,Riverstone Duplex,B,2026-05-04,1950,0,1950,Rent,May rent received
+Priya Shah,priya@example.com,Riverstone Duplex,B,2026-05-18,0,90,1860,Landscaping,Shared yard service
+,missing-owner@example.com,Riverstone Duplex,A,2026-05-18,1200,0,1200,Rent,Missing owner warning example
+Maya Chen,maya@example.com,,3C,2026-05-22,0,60,1490,Supplies,Missing property warning example
+Oliver Grant,oliver@example.com,Cedar Court,102,2026-05-28,,,1665,Adjustment,Missing amount warning example

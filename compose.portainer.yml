@@ -1,0 +1,24 @@
+services:
+  owner-report-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_PUBLIC_BASE_URL: ${VITE_APP_PUBLIC_BASE_URL:-https://owner-reports.littlecreatures.cc}
+    image: ${OWNER_REPORT_IMAGE:-owner-report-generator:local}
+    container_name: owner-report-generator
+    restart: unless-stopped
+    ports:
+      - "${OWNER_REPORT_HOST_PORT:-8088}:8080"
+    environment:
+      NGINX_ENTRYPOINT_QUIET_LOGS: "1"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+networks:
+  default:
+    name: ${OWNER_REPORT_NETWORK:-owner-report-generator}
