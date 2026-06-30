@@ -13,6 +13,7 @@ import {
 
 const MAPPING_STORAGE_KEY = "owner-report-generator:mapping:v1";
 const LOG_STORAGE_KEY = "owner-report-generator:export-log:v1";
+const APP_BUILD_MARKER = "Custom domain build";
 
 const requiredFields = [
   { key: "owner", label: "Owner", aliases: ["owner", "owner name", "landlord"] },
@@ -387,11 +388,12 @@ export default function App() {
   }
 
   return (
-    <main className="app-shell">
+    <main className="app-shell" data-build={APP_BUILD_MARKER}>
       <header className="topbar">
         <div>
           <p className="eyebrow">Local POC</p>
           <h1>Owner Report Generator</h1>
+          <span className="build-marker">{APP_BUILD_MARKER}</span>
         </div>
         <div className="status-strip">
           <span>{rows.length} rows</span>
